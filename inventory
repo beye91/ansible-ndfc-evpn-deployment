@@ -1,9 +1,9 @@
 [dcnm_controllers]
-dcnm ansible_host=10.10.20.18
+dcnm ansible_host=10.100.100.10
 
 [dcnm_controllers:vars]
 ansible_user=admin
-ansible_ssh_pass=Cisco1234!
+ansible_ssh_pass=C!sco123
 ansible_connection=ansible.netcommon.httpapi
 ansible_network_os=cisco.dcnm.dcnm
 ansible_httpapi_validate_certs=False
