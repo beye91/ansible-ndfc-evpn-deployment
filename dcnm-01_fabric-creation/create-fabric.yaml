@@ -43,5 +43,9 @@
       cisco.dcnm.dcnm_rest:
         method: GET
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
+      register: get_devices 
+      tags:
+        - get_devices
+    - debug: var=get_devices
       tags:
         - get_devices
