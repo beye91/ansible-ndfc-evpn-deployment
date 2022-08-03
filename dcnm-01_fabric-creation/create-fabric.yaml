@@ -33,6 +33,8 @@
     - name: Modify output
       ansible.builtin.set_fact:
         get_devices: "{{ result.DATA[] }}"
+      tags:
+        - get_devices
 
     - name: Copy config
       local_action: 
