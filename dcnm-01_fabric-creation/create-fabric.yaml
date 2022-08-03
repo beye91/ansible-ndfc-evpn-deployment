@@ -32,7 +32,7 @@
 
     - name: Copy config
       local_action: 
-        copy content="{{ get_devices | replace('\\n', '\n') }}" 
+        copy content="{{ get_devices.DATA | replace('\\n', '\n') }}" 
         dest=/tmp/ansible_create_fabric/get_devices.output
       tags:
         - get_devices
