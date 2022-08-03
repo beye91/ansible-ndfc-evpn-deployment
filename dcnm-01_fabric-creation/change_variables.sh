@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set +x
 while read serialNumber
 do 
     publicKey=`jq '.[] | select(.serialNumber == "'$serialNumber'") | {publicKey} ' /tmp/ansible_create_fabric/get_devices.output | grep publicKey | awk -F '"' '{print $4}'`
@@ -8,5 +8,5 @@ do
     echo $fingerprint
     sed -i -e "s/publicKey_${serialNumber}/${publicKey}/" inventory.json
     sed -i -e "s/fingerprint_${serialNumber}/${fingerprint}/" inventory.json
-    
+
 done < <(cat inventory.json | grep serialNumber | awk -F ':' '{print $2}')
