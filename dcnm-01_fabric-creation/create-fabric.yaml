@@ -22,7 +22,7 @@
       tags:
         - get_devices
 
-    - name: Deploy switch config
+    - name: Get POAP devices
       cisco.dcnm.dcnm_rest:
         method: GET
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
@@ -33,6 +33,7 @@
     - name: Copy config
       local_action: 
         copy content="{{ get_devices.stdout[0] | replace('\\n', '\n') }}" 
+        dest=/tmp/ansible_create_fabric/{{ get_devices }}.output
       tags:
         - get_devices
 
