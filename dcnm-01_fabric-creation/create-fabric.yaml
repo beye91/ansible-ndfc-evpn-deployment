@@ -26,13 +26,17 @@
       cisco.dcnm.dcnm_rest:
         method: GET
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-      register: get_devices 
+      register: result
       tags:
         - get_devices
 
+    - name: Modify output
+      ansible.builtin.set_fact:
+        get_devices: "{{ result.DATA[] }}"
+
     - name: Copy config
       local_action: 
-        copy content="{{ get_devices.DATA[] | replace('\\n', '\n') }}" 
+        copy content="{{ get_devices | replace('\\n', '\n') }}" 
         dest=/tmp/ansible_create_fabric/get_devices.output
       tags:
         - get_devices
