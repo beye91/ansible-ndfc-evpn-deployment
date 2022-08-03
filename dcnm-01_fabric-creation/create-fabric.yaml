@@ -29,6 +29,9 @@
       register: result
       tags:
         - get_devices
+    - debug: var=get_devices
+      tags:
+        - get_devices
 
     - name: Modify output
       ansible.builtin.set_fact:
