@@ -65,7 +65,7 @@
 
     - name: Load variables
       ansible.builtin.include_vars:
-        file: iventory.yaml
+        file: inventory.yaml
         name: inventory
       tags:
         - assign_devices
