@@ -15,6 +15,34 @@
       tags:
         - create_fabric
 
+    - name: Create a directory if it does not exist
+      ansible.builtin.file:
+        path: /tmp/ansible_create_fabric
+        state: directory
+      tags:
+        - get_devices
+
+    - name: Deploy switch config
+      cisco.dcnm.dcnm_rest:
+        method: GET
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
+      register: get_devices 
+      tags:
+        - get_devices
+
+    - name: Copy config
+      local_action: 
+        copy content="{{ get_devices.stdout[0] | replace('\\n', '\n') }}" 
+      tags:
+        - get_devices
+
+#    - name: Loading variables
+#        ansible.builtin.include_vars: myvars.yaml
+#
+#    - name: Loading variables
+#      set_fact:
+#        myvar: "{{ result.stdout | from_yaml | to_json }}"
+
     - name: Assign switch to the fabric using POAP
       cisco.dcnm.dcnm_rest:
         method: POST
@@ -39,13 +67,3 @@
       tags:
         - assign_devices
 
-    - name: Deploy switch config
-      cisco.dcnm.dcnm_rest:
-        method: GET
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-      register: get_devices 
-      tags:
-        - get_devices
-    - debug: var=get_devices
-      tags:
-        - get_devices
