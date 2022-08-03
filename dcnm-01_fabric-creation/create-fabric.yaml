@@ -4,12 +4,12 @@
   gather_facts: false
 
   tasks:
-  - name: Include vars of stuff.yaml into the 'stuff' variable (2.2).
-    ansible.builtin.include_vars:
-      file: fabric_settings.yaml
-      name: fabric_settings
-    tags:
-      - create_fabric
+    - name: Load variables
+      ansible.builtin.include_vars:
+        file: fabric_settings.yaml
+        name: fabric_settings
+      tags:
+        - create_fabric
 
     - name: Create template policy using Ansible
       cisco.dcnm.dcnm_rest:
