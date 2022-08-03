@@ -74,7 +74,7 @@
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-        json_data: '{{  fabric_settings | to_json  }}'
+        json_data: '{{  inventory | to_json  }}'
       tags:
         - assign_devices
 
