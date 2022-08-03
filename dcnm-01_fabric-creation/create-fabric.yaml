@@ -35,7 +35,7 @@
 
     - name: Modify output
       ansible.builtin.set_fact:
-        get_devices: "{{ result.response.DATA[] }}"
+        get_devices: "{{ result.response.DATA }}"
       tags:
         - get_devices
 
