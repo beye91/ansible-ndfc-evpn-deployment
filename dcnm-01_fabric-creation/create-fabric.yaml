@@ -29,7 +29,7 @@
       register: result
       tags:
         - get_devices
-    - debug: var=get_devices
+    - debug: var=result
       tags:
         - get_devices
 
