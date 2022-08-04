@@ -75,23 +75,11 @@
       tags:
         - assign_devices
 
-    - name: setDomainName
-      set_fact:
-        json_array: "{{ jsondata | json_query(jmesquery) }}"
-      vars:
-        jmesquery: '[0]'
-      tags:
-        - assign_devices
-
-    - debug: var=json_array
-      tags:
-        - assign_devices
-
     - name: Assign switch to the fabric using POAP
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-        json_data: "{{  json_array  }}"
+        json_data: "{{  json | to_json }}"
       tags:
         - assign_devices
 
