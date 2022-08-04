@@ -64,9 +64,8 @@
 #        myvar: "{{ result.stdout | from_yaml | to_json }}"
 
     - name: Load variables
-      ansible.builtin.include_vars:
-        shell: cat inventory.json
-        register: inventory
+      shell: cat inventory.json
+      register: inventory
       tags:
         - assign_devices
 
