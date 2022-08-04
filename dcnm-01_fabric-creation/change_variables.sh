@@ -9,4 +9,4 @@ do
     sed -i -e "s%publicKey_${serialNumber}%${publicKey}%" inventory.json
     sed -i -e "s/fingerprint_${serialNumber}/${fingerprint}/" inventory.json
 
-done < <(cat inventory.json | grep serialNumber | awk -F ':' '{print $2}')
+done < <(cat inventory.json | grep serialNumber | awk -F '"' '{print $4}')
