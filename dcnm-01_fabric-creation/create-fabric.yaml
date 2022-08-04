@@ -83,6 +83,10 @@
       tags:
         - assign_devices
 
+    - debug: var=json_array
+      tags:
+        - assign_devices
+
     - name: Assign switch to the fabric using POAP
       cisco.dcnm.dcnm_rest:
         method: POST
