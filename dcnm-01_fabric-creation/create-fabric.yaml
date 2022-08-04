@@ -65,7 +65,7 @@
 
     - name: Load variables
       ansible.builtin.include_vars:
-        file: inventory.yaml
+        file: inventory.json
         name: inventory
       tags:
         - assign_devices
@@ -74,7 +74,7 @@
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-        json_data: '{{  inventory | to_json  }}'
+        json_data: '{{  inventory  }}'
       tags:
         - assign_devices
 
