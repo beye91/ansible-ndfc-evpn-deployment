@@ -65,7 +65,13 @@
 
     - name: Load variables
       shell: cat inventory.json
-      register: inventory
+      register: inventory_json
+      tags:
+        - assign_devices
+
+    - name: save the Json data to a Variable as a Fact
+      set_fact:
+        jsondata: "{{ inventory_json.stdout | from_json }}"
       tags:
         - assign_devices
 
@@ -73,7 +79,7 @@
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
-        json_data: '{{  inventory.stdout | from_json  }}'
+        json_data: '{{  jsondata  }}'
       tags:
         - assign_devices
 
