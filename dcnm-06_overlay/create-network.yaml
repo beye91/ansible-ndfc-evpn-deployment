@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: DevNet_Fabric
+    fabric: Ansible_Fabric
 
   tasks:
     - name: Create overlay network
@@ -18,11 +18,11 @@
           net_extension_template: Default_Network_Extension_Universal
           gw_ip_subnet: '172.30.100.1/24'
           attach:
-          - ip_address: 10.10.20.173
-            ports: [Ethernet1/11]
+          - ip_address: 172.16.16.112
+            ports: [Ethernet1/6]
             int_desc: "Ansible attached interface"
             deploy: true
-          - ip_address: 10.10.20.174
-            ports: [Ethernet1/11]
+          - ip_address: 172.16.16.113
+            ports: [Ethernet1/6]
             int_desc: "Ansible attached interface"
             deploy: true

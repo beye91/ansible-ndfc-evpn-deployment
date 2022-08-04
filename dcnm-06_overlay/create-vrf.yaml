@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: DevNet_Fabric
+    fabric: Ansible_Fabric
 
   tasks:
     - name: Create VRFs inside of fabric
@@ -16,5 +16,7 @@
           vrf_template: Default_VRF_Universal
           vrf_extension_template: Default_VRF_Extension_Universal
           attach:
-          - ip_address: 10.10.20.173
+          - ip_address: 172.16.16.112
+            deploy: true
+          - ip_address: 172.16.16.113
             deploy: true
