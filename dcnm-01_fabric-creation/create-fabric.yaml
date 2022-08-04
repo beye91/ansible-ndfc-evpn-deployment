@@ -63,7 +63,7 @@
 #      set_fact:
 #        myvar: "{{ result.stdout | from_yaml | to_json }}"
 
-    - name: Load variables
+    - name: Load json file
       shell: cat inventory.json
       register: inventory_json
       tags:
@@ -87,7 +87,7 @@
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/config-save
-        json_data: {}
+        json_data: "{}"
       tags:
         - deploy_devices
 
@@ -95,6 +95,6 @@
       cisco.dcnm.dcnm_rest:
         method: POST
         path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/config-deploy/9B7HCN7Q2UX,9VKJTW1HWF2,986OYK0ICB2,98OHWTR4GU5?forceShowRun=false
-        json_data: {}
+        json_data: "{}"
       tags:
         - deploy_devices
