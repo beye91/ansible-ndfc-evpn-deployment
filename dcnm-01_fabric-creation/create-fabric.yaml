@@ -79,7 +79,7 @@
       set_fact:
         json_array: "{{ jsondata | json_query(jmesquery) }}"
       vars:
-        jmesquery: '.[0]'
+        jmesquery: '[0]'
       tags:
         - assign_devices
 
