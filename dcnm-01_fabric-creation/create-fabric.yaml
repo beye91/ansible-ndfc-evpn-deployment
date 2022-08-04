@@ -56,13 +56,6 @@
       tags:
         - get_devices
 
-#    - name: Loading variables
-#        ansible.builtin.include_vars: myvars.yaml
-#
-#    - name: Loading variables
-#      set_fact:
-#        myvar: "{{ result.stdout | from_yaml | to_json }}"
-
     - name: Load json file
       shell: cat inventory.json
       register: inventory_json
