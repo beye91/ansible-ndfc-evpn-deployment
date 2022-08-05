@@ -8,21 +8,21 @@
 
   tasks:
 
-    - name: Replace port channel interfaces
+    - name: Change interface mode
       cisco.dcnm.dcnm_interface:
         fabric: "{{ fabric }}"
-        state: replaced                       # only choose from [merged, replaced, deleted, overridden, query]
+        state: replaced                      
         config:
-          - name: eth1/4                       # should be of the form po<port-id>
-            type: eth                          # choose from this list [pc, vpc, sub_int, lo, eth]
+          - name: eth1/6                       
+            type: eth
             switch:
               - "172.16.16.112"
-              - "172.16.16.113"                 # provide the switch information where the config is to be deployed
-            deploy: true                      # choose from [true, false]
+              - "172.16.16.113"
+            deploy: true                  
             profile:
-              admin_state: true              ## choose from [true, false]
-              mode: access                     # choose from [trunk, access, l3, monitor]
-              
+              admin_state: true      
+              mode: access               
+
     - name: Create overlay network
       cisco.dcnm.dcnm_network:
         fabric: "{{ fabric }}"

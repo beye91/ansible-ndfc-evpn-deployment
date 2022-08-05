@@ -1,8 +1,8 @@
 ---
-fabricName: cbeye_cml
+fabricName: PRODUCTION_FABRIC
 templateName: Easy_Fabric
 nvPairs:
-  FABRIC_NAME: cbeye_cml
+  FABRIC_NAME: PRODUCTION_FABRIC
   BGP_AS: '65001'
   UNDERLAY_IS_V6: 'false'
   USE_LINK_LOCAL: false

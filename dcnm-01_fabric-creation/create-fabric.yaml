@@ -29,7 +29,7 @@
     - name: Get POAP devices
       cisco.dcnm.dcnm_rest:
         method: GET
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC/inventory/poap
       register: result
       tags:
         - get_devices
@@ -71,7 +71,7 @@
     - name: Assign switch to the fabric using POAP
       cisco.dcnm.dcnm_rest:
         method: POST
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/inventory/poap
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC/inventory/poap
         json_data: "{{  jsondata | to_json }}"
       tags:
         - assign_devices
@@ -79,7 +79,7 @@
     - name: Save Config for the fabric
       cisco.dcnm.dcnm_rest:
         method: POST
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/config-save
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC/config-save
         json_data: "{}"
       tags:
         - deploy_devices
@@ -87,7 +87,7 @@
     - name: Deploy switch config
       cisco.dcnm.dcnm_rest:
         method: POST
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/Ansible_Fabric/config-deploy/9B7HCN7Q2UX,9VKJTW1HWF2,986OYK0ICB2,98OHWTR4GU5?forceShowRun=false
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC/config-deploy/9B7HCN7Q2UX,9VKJTW1HWF2,986OYK0ICB2,98OHWTR4GU5?forceShowRun=false
         json_data: "{}"
       tags:
         - deploy_devices
