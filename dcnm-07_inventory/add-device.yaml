@@ -7,15 +7,15 @@
     fabric: DevNet_Fabric
 
   tasks:
-  - name: Add leaf4 to fabric
+  - name: Delete all switches from the fabric
     cisco.dcnm.dcnm_inventory:
       fabric: "{{ fabric }}"
-      state: merged 
+      state: deleted 
       config:
-      - seed_ip: 10.10.20.176
+      - seed_ip: 172.16.16.112
         auth_proto: MD5 
-        user_name: cisco
-        password: cisco12345
+        user_name: admin
+        password: C!sco123
         max_hops: 0
         role: leaf
         preserve_config: False 

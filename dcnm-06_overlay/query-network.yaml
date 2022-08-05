@@ -7,7 +7,7 @@
     fabric: PRODUCTION_FABRIC
 
   tasks:
-    - name: Create overlay network and VRF
+    - name: Query overlay network and VRF
       cisco.dcnm.dcnm_network:
         fabric: "{{ fabric }}"
         state: query
