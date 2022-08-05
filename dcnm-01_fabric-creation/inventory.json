@@ -1,6 +1,6 @@
 [
    {
-      "serialNumber":"9OUFXBT6GOA",
+      "serialNumber":"9ZE8Q7AASN8",
       "model":"N9K-C9300v",
       "version":"9.3(8)",
       "hostname":"SPINE001",
@@ -10,8 +10,8 @@
       "data":"{\"gateway\": \"172.16.16.1/24\", \"modulesModel\": [\"N9K-X9364v\", \"N9K-vSUP\"]}",
       "reAdd":"false",
       "role":"spine",
-      "fingerprint":"fingerprint_9OUFXBT6GOA",
-      "publicKey":"publicKey_9OUFXBT6GOA"
+      "fingerprint":"fingerprint_9ZE8Q7AASN8",
+      "publicKey":"publicKey_9ZE8Q7AASN8"
    },
    {
       "serialNumber":"9VKJTW1HWF2",

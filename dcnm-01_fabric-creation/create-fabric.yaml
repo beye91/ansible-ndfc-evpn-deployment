@@ -87,7 +87,7 @@
     - name: Deploy switch config
       cisco.dcnm.dcnm_rest:
         method: POST
-        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC_NEW/config-deploy/9B7HCN7Q2UX,9VKJTW1HWF2,9OUFXBT6GOA,9ZKTVZXP5YM?forceShowRun=false
+        path: /appcenter/cisco/ndfc/api/v1/lan-fabric/rest/control/fabrics/PRODUCTION_FABRIC_NEW/config-deploy/9B7HCN7Q2UX,9VKJTW1HWF2,9ZE8Q7AASN8,9ZKTVZXP5YM?forceShowRun=false
         json_data: "{}"
       tags:
         - deploy_devices
