@@ -12,5 +12,4 @@
         fabric: "{{ fabric }}"
         state: query
       register: query_vrf
-      debug:
-        var:  query_vrf
+    - debug: var=query_vrf
