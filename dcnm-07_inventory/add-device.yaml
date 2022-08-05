@@ -28,5 +28,5 @@
         preserve_config: False 
     register: result
     until: "result is not failed"
-    retries: 50
-    delay: 30
+    retries: 100
+    delay: 60
