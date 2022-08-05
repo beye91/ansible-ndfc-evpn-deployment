@@ -19,7 +19,14 @@
         max_hops: 0
         role: leaf
         preserve_config: False 
+        - seed_ip: 172.16.16.110
+        auth_proto: MD5 
+        user_name: admin
+        password: C!sco123
+        max_hops: 0
+        role: spine
+        preserve_config: False 
     register: result
     until: "result is not failed"
     retries: 50
-    delay: 10
+    delay: 30
