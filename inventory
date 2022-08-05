@@ -8,7 +8,7 @@ ansible_connection=ansible.netcommon.httpapi
 ansible_network_os=cisco.dcnm.dcnm
 ansible_httpapi_validate_certs=False
 ansible_httpapi_use_ssl=True
-ansible_command_timeout=180
+ansible_command_timeout=1200
 
 [nxos]
 spine1 ansible_host=10.10.20.171
