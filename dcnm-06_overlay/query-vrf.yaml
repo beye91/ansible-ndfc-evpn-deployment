@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: cbeye_cml
+    fabric: PRODUCTION_FABRIC
 
   tasks:
     - name: Query all VRFs deployed within the fabric

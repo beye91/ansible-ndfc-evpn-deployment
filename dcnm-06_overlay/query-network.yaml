@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: DevNet_Fabric
+    fabric: PRODUCTION_FABRIC
 
   tasks:
     - name: Create overlay network and VRF

@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: Ansible_Fabric
+    fabric: PRODUCTION_FABRIC
 
   tasks:
     - name: Create VRFs inside of fabric
