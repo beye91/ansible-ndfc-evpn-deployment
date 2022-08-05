@@ -19,7 +19,7 @@
         max_hops: 0
         role: leaf
         preserve_config: False 
-        - seed_ip: 172.16.16.110
+      - seed_ip: 172.16.16.110
         auth_proto: MD5 
         user_name: admin
         password: C!sco123
