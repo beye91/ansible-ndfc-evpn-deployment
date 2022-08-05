@@ -11,3 +11,6 @@
       cisco.dcnm.dcnm_vrf:
         fabric: "{{ fabric }}"
         state: query
+        result: query_vrf
+      debug:
+        var:  query_vrf
