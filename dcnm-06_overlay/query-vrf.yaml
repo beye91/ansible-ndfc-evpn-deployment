@@ -4,7 +4,7 @@
   gather_facts: false
 
   vars:
-    fabric: PRODUCTION_FABRIC
+    fabric: PRODUCTION_FABRIC_NEW
 
   tasks:
     - name: Query all VRFs deployed within the fabric

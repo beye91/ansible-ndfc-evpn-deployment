@@ -1,6 +1,6 @@
 [
    {
-      "serialNumber":"986OYK0ICB2",
+      "serialNumber":"9OUFXBT6GOA",
       "model":"N9K-C9300v",
       "version":"9.3(8)",
       "hostname":"SPINE001",
@@ -10,8 +10,8 @@
       "data":"{\"gateway\": \"172.16.16.1/24\", \"modulesModel\": [\"N9K-X9364v\", \"N9K-vSUP\"]}",
       "reAdd":"false",
       "role":"spine",
-      "fingerprint":"fingerprint_986OYK0ICB2",
-      "publicKey":"publicKey_986OYK0ICB2"
+      "fingerprint":"fingerprint_9OUFXBT6GOA",
+      "publicKey":"publicKey_9OUFXBT6GOA"
    },
    {
       "serialNumber":"9VKJTW1HWF2",
@@ -28,7 +28,7 @@
       "publicKey":"publicKey_9VKJTW1HWF2"
    },
    {
-      "serialNumber":"98OHWTR4GU5",
+      "serialNumber":"9ZKTVZXP5YM",
       "model":"N9K-C9300v",
       "version":"9.3(8)",
       "hostname":"LEAF001",
@@ -38,8 +38,8 @@
       "data":"{\"gateway\": \"172.16.16.1/24\", \"modulesModel\": [\"N9K-X9364v\", \"N9K-vSUP\"]}",
       "reAdd":"false",
       "role":"leaf",
-      "fingerprint":"fingerprint_98OHWTR4GU5",
-      "publicKey":"publicKey_98OHWTR4GU5"
+      "fingerprint":"fingerprint_9ZKTVZXP5YM",
+      "publicKey":"publicKey_9ZKTVZXP5YM"
    },
    {
       "serialNumber":"9B7HCN7Q2UX",
