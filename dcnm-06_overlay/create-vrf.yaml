@@ -16,7 +16,7 @@
           vrf_template: Default_VRF_Universal
           vrf_extension_template: Default_VRF_Extension_Universal
           attach:
-          - ip_address: 172.16.16.112
+          - ip_address: 172.16.16.115
             deploy: true
-          - ip_address: 172.16.16.113
+          - ip_address: 172.16.16.116
             deploy: true

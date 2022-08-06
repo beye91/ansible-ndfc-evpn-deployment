@@ -16,8 +16,8 @@
           - name: eth1/6                       
             type: eth
             switch:
-              - "172.16.16.112"
-              - "172.16.16.113"
+              - "172.16.16.115"
+              - "172.16.16.116"
             deploy: true                  
             profile:
               admin_state: true      
@@ -34,11 +34,11 @@
           net_extension_template: Default_Network_Extension_Universal
           gw_ip_subnet: '172.30.100.1/24'
           attach:
-          - ip_address: 172.16.16.112
+          - ip_address: 172.16.16.115
             ports: [Ethernet1/6]
             int_desc: "Ansible attached interface"
             deploy: true
-          - ip_address: 172.16.16.113
+          - ip_address: 172.16.16.116
             ports: [Ethernet1/6]
             int_desc: "Ansible attached interface"
             deploy: true
